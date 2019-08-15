@@ -1,0 +1,36 @@
+﻿
+1. Install Microsoft.EntitiyFrameworkCore
+
+
+2. Install Microsoft.EntitiyFrameworkCore.SqlServer
+
+
+
+3. Create DatabaseContex :
+	
+		public class DatabaseContext : DbContext
+		{
+			public DatabaseContext()
+			{
+			}
+
+			public DbSet<Station> tblStations { get; set; }
+
+		}
+
+
+4. In startup.cs -> ConfigureServices -> After services.AddMvc() add these lines
+	https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db?tabs=visual-studio
+
+
+
+	var connection = @"Server=.;Initial Catalog=DBTankMonitorV1;Trusted_Connection=True;ConnectRetryCount=0";
+	services.AddDbContext<TankMonitorV1.Models.DatabaseContext>	(options => options.UseSqlServer(connection));
+
+
+5.Tools > NuGet Package Manager > Package Manager Console
+Run the following commands:
+PowerShell
+
+	Add-Migration InitialCreate
+	Update-Database
