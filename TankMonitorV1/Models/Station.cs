@@ -25,6 +25,21 @@ namespace TankMonitorV1.Models
         [Display(Name = "موقعیت")]
         public string Location { get; set; }
 
+        [Display(Name = "تعداد تانکرها")]
+        public int TankCount { get; set; }
 
+        [Display(Name = "سریال")]
+        public string   SerialNumber { get; set; }
+
+        [Display(Name = "اولویت نمایش")]
+        public int Priority { get; set; }
+
+        [Display(Name = "وضعیت")]
+        public bool Enable { get; set; }
+
+        [Display(Name = "توضیحات")]
+        public string Descript { get; set; }
+
+        public ICollection<Tank> Tanks { get; set; }
     }
 }

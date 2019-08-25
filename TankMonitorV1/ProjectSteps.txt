@@ -34,3 +34,7 @@ PowerShell
 
 	Add-Migration InitialCreate
 	Update-Database
+
+6. After Changing Models Run the following commands:
+
+Add-Migration

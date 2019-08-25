@@ -1,0 +1,66 @@
+﻿@model TankMonitorV1.Models.Tank
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tank</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TankNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TankNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SerialNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SerialNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Capasity)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Capasity)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FuelType)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FuelType)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Enable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Enable)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Descript)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Descript)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GSID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GSID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
