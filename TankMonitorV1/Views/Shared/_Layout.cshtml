@@ -64,52 +64,40 @@
                 </div>
 
                 <ul class="nav">
-                    <li>
-                        <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <li class="@Html.IsSelected(controllers: "Home",actions: "Index")">
+                        <a  asp-area="" asp-controller="Home" asp-action="Index">
                             <i class="pe-7s-graph"></i>
                             <p>داشبورد</p>
                         </a>
                     </li>
-                    <li class="active">
+                    <li class="@Html.IsSelected(controllers: "Stations",actions: "Index,Create,Edit,Delete,Details")" >
                         <a asp-area="" asp-controller="Stations" asp-action="Index">
                             <i class="pe-7s-user"></i>
                             <p>جایگاه</p>
                         </a>
                     </li>
-                    <li>
+                    <li class="@Html.IsSelected(controllers: "Tanks",actions: "Index,Create,Edit,Delete,Details")">
                         <a asp-area="" asp-controller="Tanks" asp-action="Index">
                             <i class="pe-7s-note2"></i>
                             <p>مخازن</p>
                         </a>
                     </li>
                     <li>
-                        <a href="typography.html">
+                        <a asp-controller="Home" asp-action="Index">
                             <i class="pe-7s-news-paper"></i>
-                            <p>تایپوگرافی</p>
+                            <p>گزارشات</p>
                         </a>
                     </li>
                     <li>
-                        <a href="icons.html">
-                            <i class="pe-7s-science"></i>
-                            <p>آیکون‌ها</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maps.html">
+                        <a asp-controller="Home" asp-action="Index">
                             <i class="pe-7s-map-marker"></i>
-                            <p>نقشه ها</p>
+                            <p>نقشه</p>
                         </a>
                     </li>
                     <li>
-                        <a href="notifications.html">
+                        <a asp-controller="Home" asp-action="Index">
                             <i class="pe-7s-bell"></i>
-                            <p>اعلانات</p>
-                        </a>
-                    </li>
-                    <li class="active-pro">
-                        <a href="upgrade.html">
-                            <i class="pe-7s-rocket"></i>
-                            <p>ارتقا به پیشرفته</p>
+                            <p>مدیریت</p>
                         </a>
                     </li>
                 </ul>

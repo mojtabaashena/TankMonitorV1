@@ -53,7 +53,7 @@ namespace TankMonitorV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,GSID,GSName,Address,Location")] Station station)
+        public async Task<IActionResult> Create([Bind("Id,GSID,GSName,Address,Location,TankCount,SerialNumber,Priority,Enable,Descript")] Station station)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace TankMonitorV1.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,GSID,GSName,Address,Location")] Station station)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,GSID,GSName,Address,Location,TankCount,SerialNumber,Priority,Enable,Descript")] Station station)
         {
             if (id != station.Id)
             {

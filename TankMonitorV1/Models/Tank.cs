@@ -10,9 +10,6 @@ namespace TankMonitorV1.Models
     {
         public int Id { get; set; }
 
-        
-       
-
         [Display(Name = "شماره")]
         public int TankNumber { get; set; }
 
@@ -23,7 +20,7 @@ namespace TankMonitorV1.Models
         public int Capasity { get; set; }
 
         [Display(Name = "نوع سوخت")]
-        public int FuelType { get; set; }
+        public string FuelType { get; set; }
 
         [Display(Name = "اولویت نمایش")]
         public int Priority { get; set; }

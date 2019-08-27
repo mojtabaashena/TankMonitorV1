@@ -24,6 +24,11 @@ namespace TankMonitorV1.Controllers
             return View(await _context.tblTanks.ToListAsync());
         }
 
+        public async Task<IActionResult> StationTanks(int gsid)
+        {
+                       return  View("~/Views/Tanks/index.cshtml", await _context.tblTanks.Where( t => t.GSID == gsid).ToListAsync());
+        }
+
         // GET: Tanks/Details/5
         public async Task<IActionResult> Details(int? id)
         {
