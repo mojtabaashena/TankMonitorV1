@@ -1,0 +1,54 @@
+﻿@model TankMonitorV1.Models.tblValues
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblValues</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValParent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValParent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValData)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValData)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValDescrip)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValDescrip)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.fldValEnable)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.fldValEnable)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

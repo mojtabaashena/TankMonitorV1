@@ -1,0 +1,61 @@
+﻿@model TankMonitorV1.Models.tblValues
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>tblValues</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="fldValParent" class="control-label"></label>
+                <input asp-for="fldValParent" class="form-control" />
+                <span asp-validation-for="fldValParent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldValCode" class="control-label"></label>
+                <input asp-for="fldValCode" class="form-control" />
+                <span asp-validation-for="fldValCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldValName" class="control-label"></label>
+                <input asp-for="fldValName" class="form-control" />
+                <span asp-validation-for="fldValName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldValData" class="control-label"></label>
+                <input asp-for="fldValData" class="form-control" />
+                <span asp-validation-for="fldValData" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fldValDescrip" class="control-label"></label>
+                <input asp-for="fldValDescrip" class="form-control" />
+                <span asp-validation-for="fldValDescrip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="fldValEnable" /> @Html.DisplayNameFor(model => model.fldValEnable)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

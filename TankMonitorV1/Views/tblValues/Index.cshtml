@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TankMonitorV1.Models.tblValues>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValParent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValDescrip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.fldValEnable)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValParent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValDescrip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fldValEnable)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -17,5 +17,6 @@ namespace TankMonitorV1.Models
 
         public DbSet<Tank> tblTanks { get; set; }
 
+        public DbSet<tblValues> tblValues { get; set; }
     }
 }
